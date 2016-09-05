@@ -8,14 +8,14 @@
 <body ng-app= "myapp">
 <div ng-controller= "HelloController">
 <h2> Hello {{helloTo.title}} !</h2>
-    <textarea ng-model="textfield"></textarea>
+    <textarea ng-model="helloTo.title"></textarea>
 </div>
 <script>
 angular.module("myapp", [])
 .controller("HelloController", function($scope){
 $scope.helloTo = {};
 $scope.helloTo.title = "World, AngularJS world2";
-    $scope.$watch("textfield", function(value) {
+    $scope.$watch("helloTo.title", function(value) {
        console.log(value)
     })
 

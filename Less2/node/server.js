@@ -10,7 +10,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.listen(3000);
 
 
-
 app.use(session({
     secret: 'angular_tutorial',
     resave: true,
@@ -23,14 +22,14 @@ app.get("/notes", function(req,res) {
 app.get("/greeting", function(req,res) {
     //res.send("Hello, "+req.query.name+"! I’m server Node JS!");
     req.session.userName = req.query.name;
-    res.send();
+    res.send("hello "+req.query.name);
 });
 
 app.get("/getname", function(req,res) {
     res.send(req.session.userName);
 });
 
-app.post("/notes", function(req, res) {
+app.post("/notes", function(req,res) {
     if (!req.session.notes) {
         req.session.notes = [];
         req.session.last_note_id = 0;

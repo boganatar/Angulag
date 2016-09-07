@@ -1,8 +1,10 @@
 //var module=
 
 angular.module("myapp", [])
-    .controller("HelloController", function($scope, $http) {
+    //.controller("HelloController", function($scope,$http,$interval) {
+    .controller("HelloController", function($scope,$http) {
         $scope.greeting = "";
+
         $scope.update = function(){
         if ($scope.name) {
             $http.get("/greeting",
@@ -14,4 +16,8 @@ angular.module("myapp", [])
                 });
         }
         }
+        //$interval($scope.update, 200);
+        $scope.$watch("name", function() {
+            $scope.update();
+        });
     });

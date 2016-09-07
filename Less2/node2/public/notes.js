@@ -9,6 +9,15 @@ module.controller('NotesController',
                     $scope.notes = notes;
                 });
         };
+        $scope.add = function() {
+            var note = {text: $scope.text};
+            $http.post("/notes", note)
+                .success(function() {
+                    $scope.text = "";
+                    update();
+                });
+        };
+
         update();
     });
 

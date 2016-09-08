@@ -2,6 +2,7 @@ var express = require('express');
 var session = require('express-session');
 var bodyParser = require('body-parser');
 var fs = require('fs');
+var MongoStore = require('connect-mongo/es5')(session);
 
 var app = express();
 var path = require('path');
@@ -11,16 +12,19 @@ app.use(bodyParser.json());
 app.listen(3000);
 
 app.use(session({
+    store: new MongoStore({
+        url: 'mongodb://localhost:27017/angular_session'
+    }),
     secret: 'angular_tutorial',
     resave: true,
     saveUninitialized: true
 }));
 
-/*app.get("/notes", function(req,res) {
+app.get("/notes", function(req,res) {
     res.send(req.session.notes||[]);
-});*/
+});
 
-/*
+
 app.post("/notes", function(req, res) {
     if (!req.session.notes) {
         req.session.notes = [];
@@ -31,9 +35,22 @@ app.post("/notes", function(req, res) {
     req.session.last_note_id++;
     req.session.notes.push(note);
     res.end();
+});
+
+
+
+/*app.get("/notes", function(req,res) {
+    var notes = [
+        {text: "First note"},
+        {text: "Second note"},
+        {text: "Third note"}
+    ];
+    res.send(notes);
 });*/
+/*
 app.post("/notes", function(req, res) {
     var note = req.body;
+    note.id = req.session.lastNoteId;
     var noteText = JSON.stringify(note)+"\n";
     fs.appendFile("notes.json", noteText, function(err) {
         if (err) console.log("something is wrong");
@@ -42,6 +59,7 @@ app.post("/notes", function(req, res) {
 });
 
 app.get("/notes", function(req,res) {
+    if (!req.session.lastNoteId){req.session.lastNoteId =0;}
     fs.readFile("notes.json", function(err, result) {
         if (result) {
             result = ""+result; // convert Object to String
@@ -54,4 +72,4 @@ app.get("/notes", function(req,res) {
             res.end();
         }
     });
-});
+});*/

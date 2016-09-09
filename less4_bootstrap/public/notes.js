@@ -65,6 +65,8 @@ module.controller('NotesController',
                     $scope.text = "";
                     update();
                 });
+            note.section = $scope.activeSection;
+            if (!$scope.text || $scope.text.length==0) return;
         };
 
         update();

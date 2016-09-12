@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<script src="angular.min.js"></script>
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<body ng-app="">
+
+<p>Try writing in the input field:</p>
+
+<form name="myForm">
+    <input name="login" ng-model="login" ng-minlength= "2" ng-maxlength= "20" required>
+    <div ng-show = "myForm.login.$invalid">
+        You must enter a valid name.
+    </div>
+    <br>
+    <input name="password" ng-model="password" ng-minlength= "8" ng-maxlength= "8" ng-pattern="/\d+\w+/" required>
+    <div ng-show = "myForm.password.$invalid">
+        You must enter a valid password.
+    </div>
+    <br>
+    <input type = "number" name="age" ng-model="age" ng-min= "18" ng-max= "120" required>
+    <div ng-show = "myForm.age.$invalid">
+        You must enter a valid age.
+    </div>
+    <br>
+    <input name="gender" ng-model="gender" ng-pattern="/^male$|^female$/" required>
+    <div ng-show = "myForm.gender.$invalid">
+        You must enter a valid gender.
+    </div>
+    <br>
+
+    <div ng-show = "myForm.$valid">
+        buton
+    </div>
+
+</form>
+
+
+
+</body>
+</html>

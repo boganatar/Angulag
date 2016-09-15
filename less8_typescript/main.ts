@@ -3,6 +3,7 @@ interface Figure {
     square():number;
 }
 
+
 class Circle implements Figure{
 
     static Rad: number = 0;

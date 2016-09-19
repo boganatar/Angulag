@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title> </head>
+<body>
+<script>
+    var fact = 1;
+    for (var i = 1; i < 10; i++)
+        { fact = fact * i; document.write(i + "! = " + fact + "<br>"); }
+
+    var scope = "global"; // global variable
+    function checkscope() {
+        scope = "local"; // change global variable
+        document.write(scope); // global
+        myscope = "local"; // new global variable
+        document.write(myscope+"\n");
+    } checkscope(); // print locallocal
+    document.write(scope+"\n"); // print local
+    document.write(myscope+"\n");
+
+</script>
+</body>
+</html>

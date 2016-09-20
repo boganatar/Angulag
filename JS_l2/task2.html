@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title> </head>
+<body>
+<script>
+    var n = 100;
+    var s = n + " bottles of beer on the wall.";
+    document.write(s+"<br>");
+
+    var n = 17;
+    binary_string = n.toString(2);
+    document.write(binary_string+"<br>");
+
+    var num = 123456.789;
+
+
+    var val_123457 = num.toFixed(0);
+    document.write(val_123457+"<br>");
+    var val_12345779 = num.toFixed(2);
+    document.write(val_12345779+"<br>");
+    var val_123457798 = num.toFixed(1);
+    document.write(val_123457798+"<br>");
+
+    //c. "1.2e+5";
+    //d. "1.235e+5";
+    //e. "1.235e+5";
+    var val_exp = num.toExponential(1);
+    document.write(val_exp+"<br>");
+    var val_exp3 = num.toExponential(3);
+    document.write(val_exp3+"<br>");
+
+    var val_p = num.toPrecision(2);
+    document.write(val_p+"<br>");
+
+    var product = "21" * "2";
+    document.write(product+"<br>");
+
+    var num1= Number("123");
+    document.write(num1+"<br>");
+
+    document.write(parseInt("3 blind mice")+"<br>");
+
+    //b. parseFloat("3.14 meters");
+    //c. parseInt("12.34");
+    //d. parseInt("0xFF");
+    //e. parseInt("11", 2);
+    //f. parseInt("ff", 16);
+    //g. parseInt("zz", 36);
+    //h. parseInt("077", 8);
+    //i. parseInt("077", 10);
+    //j. parseInt("eleven");
+    //k. parseFloat("$72.47");
+
+    document.write(parseFloat("3.14 meters")+"<br>");
+
+
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title> </head>
+<body>
+<script>
+    //alert(null == undefined);
+    //alert(null === undefined);
+    //alert(5 == "5");
+    //alert(5 === "5");
+    //alert("true" == true); //?
+    //alert(1 == true);
+    //alert("1" == true); //?
+    //alert(1 === true);
+    //alert("0" == false);
+    //alert("0" === false);
+    var x = { id: 123, name: "Blah" };
+    var y = { id: 456, name: "Not Blah, definitely" };
+
+    //alert(x == "[object Object]");
+    //alert(y == "[object Object]");
+
+    //alert(x == y);
+    //alert(1 != true);
+    //alert(0 != false);
+    //alert(5 != "5");
+    var x = new Object();
+    //alert(x != "[object Object]");
+
+    var k;
+    if (k==null) {
+        //alert("k must be defined " + k);
+    }
+
+    var k = null;
+    if (k==null) {
+        //alert("k must be defined " + k);
+    }
+
+    x = "The answer is " + 42;
+    x = 42 + " is the answer";
+    x = "37" - 7; //?
+    x = "37" + 7; //?
+    x = 1 + 2;
+    x = "11" < "3";
+    x = "11" < 3;
+    x = "one" < 3;
+    x = 1 + 2 + " blind mice";
+    x = "blind mice: " + 1 + 2;
+    x = 5%3;
+    x = 5.7%3;
+    x = -3.93%2
+
+    document.write(x+"<br>");
+
+
+</script>
+</body>
+</html>

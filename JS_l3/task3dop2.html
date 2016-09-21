@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+
+
+<form action="#" onsubmit="return validateFormOnSubmit(this);">
+    First value: <input type="text" name="FirstVal" ><br>
+    Second value: <input type="text" name="SecVal" ><br>
+    Therd value: <input type="text" name="TherdVal" ><br>
+    <input type="submit" value="Submit">
+</form>
+
+<script type="text/javascript">
+    function validateFormOnSubmit(theForm) {
+
+        if(isNaN(theForm.FirstVal.value)){alert("Enter number\n" );}
+        if(isNaN(theForm.SecVal.value)){alert("Enter number\n" );}
+        if(isNaN(theForm.TherdVal.value)){alert("Enter number\n" );}
+        var biggesVal;
+
+        theForm.FirstVal.value>theForm.SecVal.value?biggesVal=theForm.FirstVal.value:biggesVal=theForm.SecVal.value;
+        biggesVal<theForm.TherdVal.value?biggesVal=theForm.TherdVal.value:biggesVal=biggesVal;
+
+        //alert("Bigest:\n"+biggesVal );
+        document.write(biggesVal+"============<br>");
+
+
+    }
+</script>
+
+
+</body>
+</html>

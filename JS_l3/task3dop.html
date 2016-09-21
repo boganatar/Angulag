@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script type="text/javascript">
+    function validateFormOnSubmit(theForm) {
+
+        if(isNaN(theForm.FirstVal.value)){alert("Enter number\n" );}
+        if(isNaN(theForm.SecVal.value)){alert("Enter number\n" );}
+        var biggesVal;
+
+        theForm.FirstVal.value>theForm.SecVal.value?biggesVal=theForm.FirstVal.value:biggesVal=theForm.SecVal.value;
+
+        alert("Bigest:\n"+biggesVal );
+
+    }
+</script>
+
+
+<form action="#" onsubmit="return validateFormOnSubmit(this);">
+    First value: <input type="text" name="FirstVal" ><br>
+    Second value: <input type="text" name="SecVal" ><br>
+    <input type="submit" value="Submit">
+</form>
+
+
+</body>
+</html>

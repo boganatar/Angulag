@@ -28,4 +28,9 @@ typeof
 3 числа
 число - вывести сумму разрядов 123=6
 ввод - размер стороны квадрата - нарисовать квадрат звездочками
+===
+arr of ints print all elements 0-10
+-//- replace all objects to numbers
+-//- print quantity of simple digits
+
 

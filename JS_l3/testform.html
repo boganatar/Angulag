@@ -1,0 +1,44 @@
+<html>
+<head>
+    <title>Javascript Arrays</title>
+</head>
+<body bgcolor="#F0F0F0">
+<h1>Implementation of Sort and Reverse Functions </h1>
+<h2>Enter number of Elements</h2>
+<form name="Anonymous Ghost">
+    <INPUT type="number" name="takeinput" id="valueField" size="30" />
+    <Input type="button" name="name1" value="Take Input" onClick="a()" />
+</form>
+<form name="Anonymous Ghost">
+    <Input type="button" name="name2" value="Ascending" onClick="b()" />
+    <Input type="button" name="name3" value="Descending" onClick="c()" />
+</form>
+</body>
+<script>
+    var words;
+    function a() {
+        var val = parseInt(document.getElementById('valueField').value);
+        words = new Array(val);
+        for (k = 0; k < words.length; k = k + 1) {
+            words[k] = window.prompt("Enter String # " + k, "");
+        }
+    }
+
+    function b() {
+        words.sort( ) ;
+        document.write( "SORTED WORDS:" + "<BR>" ) ;
+        for ( k = 0 ; k < words.length ; k = k + 1 ) {
+            document.write( words[ k ] + "<BR>" ) ;
+        }
+    }
+
+    function c() {
+        words.sort( ) ;
+        words.reverse( ) ;
+        document.write( "SORTED WORDS:" + "<BR>" ) ;
+        for ( k = 0 ; k < words.length ; k = k + 1 ) {
+            document.write( words[ k ] + "<BR>" ) ;
+        }
+    }
+</script>
+</html>

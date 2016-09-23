@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script type="text/javascript">
+    var a ={};
+    a.check_prop = 1;
+    if(a.hasOwnProperty("myprop")){
+        alert("Prop:"+ a.myprop );
+    }
+    //alert("Prop:"+ a.myprop );
+    //a.check_prop.delete();
+    for (prop1 in a){
+        if (prop1 == "check_prop"){alert("Prop:"+ a.check_prop);}
+    }
+    try {
+
+        //alert(nosuchprop);
+
+    } catch (err) {
+
+        alert(err);
+
+    }
+
+    var a = [];
+    a[1] = 1;
+    a[999999] = 2;
+    a[a.length] = "new element";
+    a.push("new element");
+    for(elem in a){document.write("elem " + a[elem] +  "<br>");}
+
+    a = new Array();
+    a[-2]=-2;
+    a[-1]=-1;
+    a[0]=0;
+    a[1]=1;
+    a[2]=2;
+    alert("Length: " + a.length);
+    for (var i=0; i<a.length; i++) {
+        alert(a[i]);
+    }
+    alert(a[a[-2]+a[1]]);
+    alert(a[3]);
+
+</script>
+
+</body>
+</html>

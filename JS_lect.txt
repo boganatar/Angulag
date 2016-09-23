@@ -32,5 +32,8 @@ typeof
 arr of ints print all elements 0-10
 -//- replace all objects to numbers
 -//- print quantity of simple digits
+=====
+write function accepting array of ins  - revert second part of array
+-//- and indexes of arrays, sort elements indexes of which given
 
 

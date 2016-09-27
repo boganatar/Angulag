@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<script type="text/javascript">
+
+    /*function Complex(r, i){
+        this.i = i;
+        this.r =r;
+    }
+    //multiply(x1*x2-y1*y2+(x1*y2+x2*y1)),
+    Complex.prototype.multiply = function(that) {
+        return new Complex(this.r * that.r, this.i * that.i);
+    };
+    //magnitude квадратный корень из x*x+y*y)
+    Complex.prototype.magnitude = function(that) {
+        return sqrt((this.r * that.r)+(this.i * that.i));
+    };
+
+    Complex.prototype.add = function(that) {
+        return new Complex(this.r + that.r, this.i + that.i);
+    };
+    // Convert a Complex object to a string in a useful way.
+    Complex.prototype.toString = function() {
+        return "{" + this.r + "," + this.i + "}";
+    };
+    //negative,
+    Complex.prototype.add = function() {
+        return new Complex(this.r = -this.r, this.i= -this.i);
+    };
+    //valueOf(),
+    Complex.prototype.valueOf = function() {
+        return this.r;
+    };
+
+    Complex.prototype.equals = function(that) {
+        return that != null &&
+        that.constructor === Complex &&
+        this.r === that.r && this.i === that.i; };
+
+    Complex.ZERO = new Complex(0,0);
+    Complex.ONE = new Complex(1,0);
+    Complex.I = new Complex(0,1);
+
+    alert(Complex.ONE.toString());*/
+
+    function Rectangle(w, h) {
+        this.width = w;
+        this.height = h;
+    }
+    Rectangle.area =
+            function( ) { return this.width * this.height; }
+
+    //Parent.call(this); this.b = 3.14159
+
+    function PositionedRectangle (a,b,x,y){
+        Rectangle.call(this);
+        this.x = x;
+        this.y = y;
+    }
+
+    PositionedRectangle.prototype = Object.create(Rectangle.prototype);
+    PositionedRectangle.prototype.constructor = PositionedRectangle;
+
+    PositionedRectangle.prototype.contains = function contains(k,l) {
+        return k >= this.x && k<= this.x + this.height && l >= this.y && l <= this.y + this.width;
+    }
+
+
+</script>
+
+
+</body>
+</html>
+
+

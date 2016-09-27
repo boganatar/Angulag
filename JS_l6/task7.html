@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script type="text/javascript">
+
+    /* функция sum определена ниже */
+/*    var a = sum(2,2)
+    function sum(x,y) {
+        return x+y
+    }
+    alert(a);*/
+    /* будет ошибка, т.к sum еще не существует */
+/*    var a = sum(2,2)
+    var sum = function(x,y) {
+        return x+y
+    }
+    alert(a);*/
+/*
+    function f(p) {
+        if (p>0) return p;
+    }
+    x = f(5);
+    alert(x);
+    x = f(-5);
+    alert(x);
+
+    function func(param) {
+        alert("First declaration");
+    }
+    function func() {
+        alert("Second declaration");
+    }
+    func(2);
+    */
+/*    function f() {
+        p = 5;
+    }
+    f();
+    alert(p);*/
+
+/*
+    function f() {
+        var p = 5;
+    }
+    f();
+    alert(p);
+*/
+/*    var run = function(distance, speed) {
+        speed = speed || 10;
+        var time = distance / speed;
+        return time;
+    }
+    //run(), run(10), run(10,5), run(10, 5, 2, 7);
+    a = run(10,5,2,7);
+    alert(a);*/
+
+/*    function med_ar() {
+        var s = 0
+        for(var i=0; i<arguments.length; i++) s += arguments[i]
+        return s/i;
+    }
+    a = med_ar(1,2,3,4,5);
+    alert(a);*/
+
+/*    function resize(toWidth, toHeight, saveProportion, animate) {
+// значения по умолчанию
+        saveProportions = saveProportions || true
+        animate = animate || true
+        toHeight = toHeight || true
+    }*/
+/*    function resize(setup) {
+// значения по умолчанию
+        var saveProportions = setup.saveProportions || true
+        var animate = setup.animate || true
+        var toHeight = setup.toHeight || true
+    }
+
+    resize({toWidth: 100, animate: true});*/
+
+/*    function makeShout() {
+        var phrase = "Hi!"
+        var shout = function() {
+            alert(phrase)
+        }
+        phrase = "Redy!"
+        return shout
+    }
+    shout = makeShout()
+    // что выдаст?
+    shout()*/
+
+/*    function summ(a,b){return a+b;}
+    c=summ;
+    alert(c(2,3));*/
+    //a=0;
+
+/*    summ = function (a){return sum = function (b){return a+b;}}
+
+    cc = summ(1)(9);
+    alert(cc);*/
+
+    function makeProperty(o, name, predicate) {
+        var value;
+        o["get" + name] = function() { return value; };
+        o["set" + name] = function(v) {
+            if (predicate && !predicate(v))
+                throw "set" + name + ": invalid value " + v;
+            else
+                value = v;
+        };
+    }
+
+    var o = {};
+    makeProperty(o, "Name", function(x) { return typeof x == "string"; });
+    o.setName("Frank");
+    alert(o.getName());
+    o.setName(0);
+    alert(o.getName());
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+</body>
+</html>
+
+

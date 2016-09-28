@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div id="codesection">
+    <ul>
+        <li><a href="http://www.sitepoint.com/" id="splink"> SitePoint</a>
+        </li>
+        <li><a href="http://www.yahoo.com/" id="yalink"> Yahoo!</a></li>
+    </ul>
+</div>
+
+
+<form action="#" onsubmit="return validateFormOnSubmit(this);">
+
+    <input type="submit" value="Submit">
+</form>
+
+<form action="#" onsubmit="return changeFormOnSubmit(this);">
+
+    <input type="submit" value="Change">
+</form>
+
+<form action="#" onsubmit="return insertFormOnSubmit(this);">
+
+    <input type="submit" value="Insert">
+</form>
+
+<script type="text/javascript">
+    function validateFormOnSubmit(theForm) {
+        var sitepoint = document.getElementById("splink");
+        alert(sitepoint);
+        //alert("Bigest:\n"+biggesVal );
+        //document.write(biggesVal+"============<br>");
+    }
+    function changeFormOnSubmit(theForm) {
+        var sitepoint = document.getElementById("splink");
+        sitepoint.setAttribute("href", "http://www.google.com/");
+        sitepoint.insertBefore(sitepoint);
+        //alert(sitepoint);
+        //alert("Bigest:\n"+biggesVal );
+        //document.write(biggesVal+"============<br>");
+        //<a href="http://www.linux.org/">The Linux operating system</a>;
+    }
+    function insertFormOnSubmit(theForm) {
+        var sitepoint = document.getElementById("yalink");
+        //sitepoint.setAttribute("href", "http://www.google.com/");
+        var createA = document.createElement('a');
+        var createAText = document.createTextNode('The Linux operating system');
+        createA.setAttribute('href', "http://www.linux.org/");
+        createA.appendChild(createAText);
+
+        var parentUL = sitepoint.parentNode;
+
+        parentUL.insertBefore(createA, sitepoint);
+        //alert(sitepoint);
+        //alert("Bigest:\n"+biggesVal );
+        //document.write(biggesVal+"============<br>");
+        //<a href="http://www.linux.org/">The Linux operating system</a>;
+    }
+
+</script>
+
+
+</body>
+</html>

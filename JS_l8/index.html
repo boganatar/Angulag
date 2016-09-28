@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<script type="text/javascript">
+
+    for (var i = 0; i < document.body.childNodes.length; i++) {
+        alert( document.body.childNodes[i].TEXT_NODE ); // Text, DIV, Text, UL, ..., SCRIPT
+    }
+
+    //alert(document.documentElement.lastChild)
+
+/*var elems = document.documentElement.childNodes;
+
+[].forEach.call(elems, function(elem) {
+    alert( elem ); // HEAD, текст, BODY
+});*/
+
+
+/*
+    printNode(document.documentElement);
+    function printNode(elem){
+        if (elem.nodeType !== Node.TEXT_NODE){
+            alert(elem.nodeName);
+        }
+        for(var i = 0; i < elem.childNodes.length; i++){
+            printNode(elem.childNodes[i]);
+        }
+    }*/
+
+</script>
+
+<p>Ut wisis enim ad minim veniam, quis nostrud exerci tution ullamcorper
+    suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+    <i>rrrrr</i>
+</p>
+
+<div>begin</div>
+
+<ul>
+    <li>info</li>
+</ul>
+
+<div>end</div>
+
+
+
+</body>
+</html>
+
+

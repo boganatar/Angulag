@@ -35,5 +35,22 @@ arr of ints print all elements 0-10
 =====
 write function accepting array of ins  - revert second part of array
 -//- and indexes of arrays, sort elements indexes of which given
+========
+
+Document modification
+• You can create new Element nodes with the createElement()
+method of the Document object
+• Once you have a new node, you can insert it into the
+document with the Node methods appendChild() or
+insertBefore()
+• The removeChild() method removes a node from the
+document tree
+• The Element type also defines get Attribute() and
+setAttribute() methods that you can use to query and set
+HTML attributes
+// Create a < script> elem ent
+var s = docum ent.createElement("script");
+var headline = docum ent.getElem entById("headline");
+headline .setAttribute("align", "center");
 
 

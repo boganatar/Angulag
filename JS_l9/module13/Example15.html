@@ -1,0 +1,29 @@
+<html>
+<head>
+<script type="text/javascript">
+function moveover()
+{
+document.getElementById('image').width="200";
+document.getElementById('image').height="360";
+document.getElementById('text1').innerHTML="Enlarge image!";
+}
+function moveback()
+{
+document.getElementById('image').width="100";
+document.getElementById('image').height="180";
+document.getElementById('text1').innerHTML="Original size";
+}
+</script>
+</head>
+
+<body>
+
+<b id="text1">Mouse over the image:</b><br />
+<img id="image" src="bulbon.gif"
+onmouseover="moveover()"
+onmouseout="moveback()"
+width="100" height="180" />
+
+</body>
+</html>
+

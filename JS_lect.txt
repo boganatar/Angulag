@@ -54,3 +54,7 @@ var headline = docum ent.getElem entById("headline");
 headline .setAttribute("align", "center");
 
 
+200-299 - ok
+300-399 redirect
+400-499 client error
+500-599 server error

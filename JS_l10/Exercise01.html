@@ -1,0 +1,22 @@
+<html>
+<head> </head>
+
+<body onload="register()">
+<script>
+
+var handler = function() {
+    alert('Hi!');
+}
+ 
+var handler2 = function() {
+    alert('Bue!');
+}
+function register() {
+var myElement2 = document.getElementById("myElement2");
+myElement2.attachEvent("onclick", handler);
+myElement2.attachEvent("onclick", handler2);
+}
+</script>
+<input id="myElement2" type="button" value="Apply"/>
+</body>
+</html>

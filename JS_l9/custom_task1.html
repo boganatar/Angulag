@@ -27,17 +27,17 @@
     Relative positioning moves an element relative to its original position.
 </p>
 <p id="p1">
-    "left:20" adds 20 pixels to the element's LEFT position.
+    "left:20" adds 20 pixels to the element's LEFT position 1.
 </p>
 <p id="p2">
-    "left:-20" subtracts 20 pixels from the element's LEFT position.
+    "left:-20" subtracts 20 pixels from the element's LEFT position 2.
 </p>
 </body>
 <script type="text/javascript">
     var p1 = $("#p1").text();
     var p2 = $("#p2").text();
-   $("#p1").val(p2);
-   $("#p2").val(p1);
+   $("#p1").text(p2);
+   $("#p2").text(p1);
 //http://www.jquery-tutorial.net/dom-manipulation/getting-and-setting-content/
     //$(#p1).append(newp1);
     //$(document).append(newp2);

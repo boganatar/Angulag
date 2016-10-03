@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<form id="myForm" action="/notes" method="POST">
+    Note<br/>
+    <input type="text" name="fname"/><br/>
+    <input id="submitBtn" type="button">Submit</input>
+</form>
+
+
+
+<a href="javascript:func(); void 0;">Link</a>
+</body>
+</html>
+<script>
+
+get('http://localhost:3000/notes', function (resp) {
+    console.log(resp);
+});
+
+function get(url, callback) {
+    var request = new XMLHttpRequest();
+
+     request.open("GET", url);
+    request.onreadystatechange = function() {
+       if (request.readyState === 4 && request.status === 200) {
+                var type = request.getResponseHeader("Content-Type");
+    
+                if (type.indexOf("xml") !== -1 && request.responseXML) {
+                    callback(request.responseXML);
+                 } else if (type === "application/json") {
+                     callback(JSON.parse(request.responseText)); // JSON response
+                 } else {
+                     callback(request.responseText);
+                 }
+
+       }
+    }
+    request.send(null);
+}
+
+</script>

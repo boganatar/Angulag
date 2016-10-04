@@ -58,3 +58,7 @@ headline .setAttribute("align", "center");
 300-399 redirect
 400-499 client error
 500-599 server error
+====
+mvc
+model - patern Observer
+component - controller+view
